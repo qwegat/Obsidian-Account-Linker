@@ -11,8 +11,8 @@ class websiteConfig {
         this.name = ""
         this.color = "#FFFFFF"
         this.urlTemplate = ""
-        this.labelTemplate = "@{{NAME}}"
-        this.doesReverseResolution = false
+        this.labelTemplate = ""
+        this.doesReverseResolution = true
     }
 }
 
