@@ -1,11 +1,13 @@
 # Obsidian Account Linker
 This is an Obsidian plugin for systematically listing accounts to external sites in the front matter
 ## Example
-Input:
+- Input:
 ![](./media/image001.png)
-Preview:
+
+- Preview:
 ![](./media/image002.png)
-Settings:
+
+- Settings:
 ![](./media/image003.png)
 
 ## Features
