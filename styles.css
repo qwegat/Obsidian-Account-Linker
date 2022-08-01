@@ -1,4 +1,30 @@
-/* Sets all the text color to red! */
-body {
-    color: red;
+.frontmatter-section-accounts{
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.frontmatter-accounts {
+    background-color: var(--background-secondary-alt);
+    border-radius: 30px;
+    font-size: 0.9em;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 2px 4px;
+    display: inline-flex;
+    padding: 0;
+}
+
+.frontmatter-accounts-sitename {
+    display: block;
+    padding: 2px 8px 2px 8px;
+    line-height: 19px;
+    margin: 0;
+}
+.frontmatter-accounts-label {
+    display: block;
+    padding: 2px 8px 2px 8px;
+    line-height: 19px;
+    margin: 0;
 }
