@@ -2,12 +2,15 @@
 This is an Obsidian plugin for systematically listing accounts to external sites in the front matter
 ## Example
 - Input:
+
 ![](./media/image001.png)
 
 - Preview:
+
 ![](./media/image002.png)
 
 - Settings:
+
 ![](./media/image003.png)
 
 ## Features
