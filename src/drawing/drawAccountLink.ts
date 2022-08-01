@@ -1,5 +1,5 @@
-import {replaceTemplateText,isColor,isURL,selectFontColor} from "./utils";
-import { websiteConfig } from "./websiteConfig";
+import {replaceTemplateText,isColor,isURL,selectFontColor} from "../control/utils";
+import { websiteConfig } from "../control/websiteConfig";
 
 export default function drawAccountLink(a:HTMLAnchorElement,config:websiteConfig,text:string) {
     a.empty()

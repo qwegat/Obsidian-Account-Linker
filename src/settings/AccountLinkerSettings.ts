@@ -11,21 +11,21 @@ export const DEFAULT_SETTINGS: AccountLinkerSettings = {
             color:"#3e9cec",
             urlTemplate:"https://twitter.com/{{NAME}}",
             labelTemplate:"@{{NAME}}",
-            doesReverseResolution:true
+            doesReverseResolution:false
         },
         {
             name:"GitHub",
             color:"#0a0c10",
             urlTemplate:"https://github.com/{{NAME}}",
             labelTemplate: "@{{NAME}}",
-            doesReverseResolution:true
+            doesReverseResolution:false
         },
         {
-            name:"YouTube",
-            color:"#f50015",
-            urlTemplate:"https://www.youtube.com/channel/{{NAME}}",
-            labelTemplate:"",
-            doesReverseResolution:true
+            name:"Mail",
+            color:"#e7e7e7",
+            urlTemplate:"mailto:{{NAME}}",
+            labelTemplate:"{{NAME}}",
+            doesReverseResolution:false
         }
     ]
 }

@@ -1,6 +1,6 @@
 import AccountLinker from "main";
 import {Modal,Setting} from "obsidian"
-import drawAccountLink from "src/control/drawAccountLink";
+import drawAccountLink from "src/drawing/drawAccountLink";
 import { websiteConfig } from "src/control/websiteConfig";
 import { isColor,isURL } from "src/control/utils";
 
@@ -109,7 +109,7 @@ export default class WebsiteEditModal extends Modal {
                     }),
             doesReverseResolution:
                 new Setting(this.contentEl)
-                    .setName("Reverse Resolution")
+                    .setName("Reverse Resolution(Unimplemented)")
                     .setDesc(descriptions.doesReverseResolution)
                     .addToggle(cb=>{
                         cb
@@ -119,6 +119,7 @@ export default class WebsiteEditModal extends Modal {
                                 this.updateText("doesReverseResolution", settings)
                                 this.updateDisplay(settings)
                             })
+                            .setDisabled
                     }),
             previewBox: 
                 new Setting(this.contentEl)
@@ -147,8 +148,8 @@ export default class WebsiteEditModal extends Modal {
             case "name":
                 if (this.config.name == ""){
                     return "The name length must be greater than zero"
-                }else if (["aliases","tags","cssclass","publish","accounts"].includes(this.config.name.toLowerCase())) {
-                    return "The name must be something other than `aliases`, `tags`, `cssclass`, `publish`, `accounts`"
+                }else if (["aliases","alias","tags","tag","cssclass","publish","accounts"].includes(this.config.name.toLowerCase())) {
+                    return "The name must be something other"
                 }else{
                     return ""
                 }

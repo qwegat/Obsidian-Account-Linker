@@ -12,7 +12,7 @@ class websiteConfig {
         this.color = "#FFFFFF"
         this.urlTemplate = ""
         this.labelTemplate = ""
-        this.doesReverseResolution = true
+        this.doesReverseResolution = false
     }
 }
 

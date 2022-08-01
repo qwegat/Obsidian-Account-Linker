@@ -1,6 +1,6 @@
 import { App, PluginSettingTab, Setting} from 'obsidian';
 import AccountLinker from 'main';
-import drawAccountLink from 'src/control/drawAccountLink';
+import drawAccountLink from 'src/drawing/drawAccountLink';
 import WebsiteEditModal from './WebsiteEditModal';
 import { websiteConfig } from 'src/control/websiteConfig';
 

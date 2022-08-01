@@ -11,7 +11,8 @@ export function isColor(code:string):boolean {
 }
 
 export function isURL(link:string):boolean {
-    return new RegExp("^https?://[\\w/:%#\\$&\\?\\(\\)~\\.=\\+\\-]+$").test(link)
+    return true
+    //TODO
 }
 
 export function selectFontColor(backgroundColor: string): string {
