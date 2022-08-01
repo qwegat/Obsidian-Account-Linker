@@ -20,7 +20,7 @@ This is an Obsidian plugin for systematically listing accounts to external sites
   - Base color of the service
   - URI substitution rules (currently only supports `{{NAME}}`)
   - Account name substitution rules (currently only `{{NAME}}` is supported)
--  More advanced configuration by using URI schemes such as `mailto://` or `obsidian://`
+-  More advanced configuration by using URI schemes such as `mailto:` or `obsidian://`
 
 ## TODO
 - Reverse generation of account names from URIs
