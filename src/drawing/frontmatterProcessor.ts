@@ -33,15 +33,9 @@ export const frontmatterProcessor = (plugin:AccountLinker) => async(el: HTMLElem
 
             const target = el.querySelector(".frontmatter-container") as HTMLElement
             if (accountList.length) {
-                target.innerHTML += `
-<div class="frontmatter-section">
-    <span class="frontmatter-section-label">Accounts</span>
-    <div class="frontmatter-section-accounts">
-    </div>
-</div>
-`
-                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                const section = target.querySelector(".frontmatter-section-accounts")!
+                const frontmatterSection = target.createDiv({ cls: "frontmatter-section" })
+                frontmatterSection.createDiv({ cls: "frontmatter-section-label" })
+                const section = frontmatterSection.createDiv({ cls: "frontmatter-section-accounts" })
                 accountList.forEach(a => {
                     const linkTag = section.createEl("a")
                     drawAccountLink(linkTag, a.config, a.value)
