@@ -47,9 +47,10 @@ export default class AccountLinkerSettingTab extends PluginSettingTab {
 					button.setIcon("cross");
 					button.setTooltip("Remove");
 				});
-            const linker = document.createElement("a")
+            const linker = createEl("a")
             drawAccountLink(linker,website,"example")
-            s.descEl.innerHTML += linker.outerHTML
+            s.descEl.setChildrenInPlace([linker])
+            
         })
         new Setting(div)
             .addButton(button=>{

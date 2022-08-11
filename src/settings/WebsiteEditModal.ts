@@ -172,10 +172,10 @@ export default class WebsiteEditModal extends Modal {
         }
     }
     updateText(key:"name"|"color"|"urlTemplate"|"labelTemplate"|"doesReverseResolution",settings:SettingsDir) {
-        if (this.checkConfig(key) != ""){
-            settings[key].descEl.innerHTML = descriptions[key]+`<br><span class='mod-warning'>${this.checkConfig(key)}</span>`
-        }else{
-            settings[key].descEl.innerHTML = descriptions[key]
+        settings[key].descEl.setText(descriptions[key])
+        if (this.checkConfig(key) != "") {
+            settings[key].descEl.createEl("br")
+            settings[key].descEl.createEl("span",{cls:"mod-warning",text:this.checkConfig(key)})
         }
     }
     updateDisplay(settings:SettingsDir){
@@ -186,9 +186,9 @@ export default class WebsiteEditModal extends Modal {
             }
         })
         settings.saveButton.setDisabled(f)
-        const linker = document.createElement("a")
+        const linker = createEl("a")
         drawAccountLink(linker, this.config, "example")
-        settings.previewBox.descEl.innerHTML = linker.outerHTML
+        settings.previewBox.descEl.setChildrenInPlace([linker])
         
     }
     
