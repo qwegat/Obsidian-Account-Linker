@@ -20,7 +20,6 @@ export const frontmatterProcessor = (plugin:AccountLinker) => async(el: HTMLElem
                 }
                 siteDict[config.name.toLowerCase()].push(config)
             })
-            console.log(siteDict)
             const accountList:{config:websiteConfig;value:string}[] = []
             Object.keys(ctx.frontmatter).forEach(key=>{
                 if (Object.keys(siteDict).includes(key.toLowerCase())){
